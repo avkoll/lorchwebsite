@@ -8,4 +8,5 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true }), // enables Vuetify components and directives
   ],
+  base: '/',
 });
