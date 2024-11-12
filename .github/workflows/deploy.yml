@@ -26,16 +26,16 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
-        working-directory: lorchonlinewebsite
+
 
       # Step 4: Build the Vue app
       - name: Build Vue app
         run: npm run build
-        working-directory: lorchonlinewebsite
+
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: lorchonlinewebsite/dist
+          publish_dir: /dist
