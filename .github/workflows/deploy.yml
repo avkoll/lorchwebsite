@@ -12,25 +12,31 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3  # Update to the latest version (v3)
+        uses: actions/checkout@v3
 
       # Step 2: Set up Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3  # Update to the latest version (v3)
+        uses: actions/setup-node@v3
         with:
           node-version: '20'  # Use Node.js version 20 for compatibility
 
-      # Step 3: Install dependencies
+      # Step 3: Navigate to the project directory
+      - name: Change directory to project
+        run: cd lorchonlinewebsite
+
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
+        working-directory: lorchonlinewebsite
 
-      # Step 4: Build the Vue app
+      # Step 5: Build the Vue app
       - name: Build Vue app
         run: npm run build
+        working-directory: lorchonlinewebsite
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: lorchonlinewebsite/dist
