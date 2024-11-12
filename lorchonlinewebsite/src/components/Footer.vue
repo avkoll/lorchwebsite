@@ -1,11 +1,12 @@
-<script setup>
-
-</script>
-
 <template>
-
+  <v-footer app>
+    <v-spacer></v-spacer>
+    <span>&copy; 2024 My App</span>
+  </v-footer>
 </template>
 
-<style scoped>
-
-</style>
+<script>
+export default {
+  name: 'Footer',
+};
+</script>
