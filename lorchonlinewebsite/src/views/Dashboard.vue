@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
+import Header from '../components/layout/Header.vue';
 import Sidebar from '../components/Sidebar.vue';
-import Footer from '../components/Footer.vue';
+import Footer from '../components/layout/Footer.vue';
 import DashboardCard from '../components/DashboardCard.vue';
 
 export default {

@@ -10,7 +10,7 @@ export default createVuetify({
         sets: { mdi },
     },
     theme: {
-        defaultTheme: 'light',
+        defaultTheme: 'dark',
         themes: {
             light: { /* Custom colors */ },
         },
