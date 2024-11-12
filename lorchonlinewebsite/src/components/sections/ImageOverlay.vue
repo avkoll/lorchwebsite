@@ -25,6 +25,7 @@ export default {
 <style scoped>
 .image-overlay {
   height: 60vh; /* Adjust height as per your design */
+  width: 100%;   /* Add width to ensure it's visible */
   position: relative;
 }
 

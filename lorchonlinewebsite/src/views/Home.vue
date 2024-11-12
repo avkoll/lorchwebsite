@@ -1,20 +1,13 @@
+<!-- src/views/Home.vue -->
 <template>
   <div>
-
     <Hero />
 
-    <v-container>
-      <h1>Home Page</h1>
-      <p>Welcome to the home page.</p>
-    </v-container>
-
-    <ImageOverlay imageSrc="@/assets/satellite.png">
+    <ImageOverlay imageSrc="./src/assets/satellite.png">
       <h2 style="color: white; font-size: 2.5rem; font-family: 'Arial', sans-serif;">
         Feature One: Capturing Light Like Never Before
       </h2>
     </ImageOverlay>
-
-
   </div>
 </template>
 
@@ -26,6 +19,6 @@ import ImageOverlay from "../components/sections/ImageOverlay.vue";
 import Hero from "../components/layout/Hero.vue";
 
 export default {
-  components: {Hero, ImageOverlay, Header, Sidebar, Footer },
+  components: { Hero, ImageOverlay, Header, Sidebar, Footer },
 };
 </script>
