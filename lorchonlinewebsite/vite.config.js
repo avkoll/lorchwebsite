@@ -8,5 +8,10 @@ export default defineConfig({
     vue(),
     vuetify({ autoImport: true }), // enables Vuetify components and directives
   ],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
+  root: 'frontend',
   base: '/lorchwebsite/',
 });
