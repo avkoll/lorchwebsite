@@ -8,6 +8,13 @@
         Feature One: Capturing Light Like Never Before
       </h2>
     </ImageOverlay>
+    <ImageOverlay image-src="jermaIcon.png">
+      <h2 style="color: white; font-size: 2.5rem; font-family: 'Arial', sans-serif;">
+        ▒͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌█͌͌͌͌͌͌͌͌͌͌͌͌͌͌■°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌ LORCH PROTOCOL
+        <br>
+        ▒͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌█͌͌͌͌͌͌͌͌͌͌͌͌͌͌■°͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌
+      </h2>
+    </ImageOverlay>
   </div>
 </template>
 
