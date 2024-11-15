@@ -2,20 +2,34 @@
   <div class="store-page">
     <h1>Our Store</h1>
     <div class="product-grid">
-      <div v-for="product in products" :key="product.id" class="product-card">
+      <div
+          v-for="product in products"
+          :key="product.id"
+          class="product-card"
+          @click="openModal(product)"
+      >
         <Product3D :modelPath="product.modelPath" :scale="product.scale" />
         <h2>{{ product.name }}</h2>
         <p class="product-description">{{ product.description }}</p>
         <p class="product-price">${{ product.price.toFixed(2) }}</p>
-        <button @click="addToCart(product)">Add to Cart</button>
+        <button @click.stop="addToCart(product)">Add to Cart</button>
       </div>
     </div>
+
+    <!-- Product Modal -->
+    <ProductModal
+        v-if="selectedProduct"
+        :isOpen="isModalOpen"
+        :product="selectedProduct"
+        @close="closeModal"
+    />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import Product3D from '../components/common/Product3D.vue';
+import ProductModal from '../components/common/ProductModal.vue';
 
 const products = ref([
   {
@@ -40,9 +54,22 @@ const products = ref([
     description: "This is a description of product 3.",
     price: 39.99,
     modelPath: '/lorchwebsite/models/BoomBox.glb',
-    scale: 50,
+    scale: 20,
   },
 ]);
+
+const isModalOpen = ref(false);
+const selectedProduct = ref(null);
+
+function openModal(product) {
+  selectedProduct.value = product;
+  isModalOpen.value = true;
+}
+
+function closeModal() {
+  isModalOpen.value = false;
+  selectedProduct.value = null;
+}
 
 function addToCart(product) {
   alert(`${product.name} has been added to your cart!`);
@@ -69,12 +96,8 @@ function addToCart(product) {
   text-align: center;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
 }
 
 .product-description {
