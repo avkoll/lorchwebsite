@@ -1,7 +1,7 @@
 <!-- src/components/Hero.vue -->
 <template>
   <v-container class="hero" fluid>
-    <v-img src="@/assets/hero-image.jpg" class="hero-image">
+    <v-img src="/lorchLink.png" class="hero-image">
       <div class="overlay">
         <h1>"We Capture Light, You Capture What’s Left." <br>
           -Lorch</h1>
@@ -32,7 +32,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
-  color: white;
+  color: black;
   font-family: 'Georgia', sans-serif;
   font-size: 2rem;
   font-style: italic;

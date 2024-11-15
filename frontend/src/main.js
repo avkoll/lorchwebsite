@@ -2,7 +2,11 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import vuetify from './plugins/vuetify'; // Ensure Vuetify is correctly imported
+import { createVuetify } from 'vuetify';
+import 'vuetify/styles';
+// import './style.css'
+
+const vuetify = createVuetify();
 
 createApp(App)
     .use(router)     // Use the router
