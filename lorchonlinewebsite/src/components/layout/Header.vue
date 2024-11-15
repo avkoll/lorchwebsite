@@ -5,7 +5,8 @@
     <v-spacer></v-spacer>
     <v-btn text to="/">THE MAIN LORCH CONTENT</v-btn>
     <v-btn text to="/about">Lorch</v-btn>
-    <v-btn text to="/contact">!!LORCH STORE$$$</v-btn>
+    <v-btn text to="/store">!!LORCH STORE$$$</v-btn>
+    <v-btn text to="/3d-scene">LORCH REALITY</v-btn>
   </v-app-bar>
 </template>
 
