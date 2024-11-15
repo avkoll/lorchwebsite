@@ -9,7 +9,7 @@ export default defineConfig({
     vuetify({ autoImport: true }), // Enables Vuetify components and directives
   ],
   build: {
-    outDir: '../dist',  // Places the output in a `dist` folder at the same level as `frontend`
+    outDir: 'dist',
     emptyOutDir: true,
   },
   base: '/',  // Correct base URL for Vercel deployment
