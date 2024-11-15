@@ -1,14 +1,37 @@
-// main.js
+// src/main.js
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+
+// Vuetify styles and icons
 import { createVuetify } from 'vuetify';
 import 'vuetify/styles';
-// import './style.css'
+import '@mdi/font/css/materialdesignicons.css';
 
-const vuetify = createVuetify();
+// Import Vercel Analytics
+import { inject } from '@vercel/analytics';
 
-createApp(App)
+// Create Vuetify instance
+const vuetify = createVuetify({
+    theme: {
+        defaultTheme: 'dark',
+    },
+    display: {
+        thresholds: {
+            xs: 340,
+            sm: 540,
+            md: 800,
+            lg: 1280,
+        },
+        scrollBarWidth: 16,
+    },
+});
+
+// Create Vue app
+const app = createApp(App)
     .use(router)     // Use the router
     .use(vuetify)    // Use Vuetify
     .mount('#app');
+
+// Inject Vercel Analytics
+inject();

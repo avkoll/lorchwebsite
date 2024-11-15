@@ -4,7 +4,7 @@
     <Hero />
 
     <ImageOverlay imageSrc="satellite.png">
-      <h2 style="color: white; font-size: 2px; font-family: 'Arial', sans-serif;">
+      <h2 style="color: white; font-size: 2.5rem; font-family: 'Arial', sans-serif;">
         Feature One: Capturing Light Like Never Before
       </h2>
     </ImageOverlay>

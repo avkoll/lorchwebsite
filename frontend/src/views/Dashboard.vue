@@ -1,13 +1,10 @@
 <template>
   <div>
-    <Header />
-    <Sidebar />
     <v-container>
       <h1>Dashboard</h1>
       <DashboardCard />
       <DashboardCard />
     </v-container>
-    <Footer />
   </div>
 </template>
 

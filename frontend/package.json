@@ -11,6 +11,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@vercel/analytics": "^1.4.0",
     "three": "^0.170.0",
     "vite-plugin-vuetify": "^2.0.4",
     "vue": "^3.5.12",
