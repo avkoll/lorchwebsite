@@ -15,11 +15,11 @@
       </template>
 
       <!-- Mega Menu Content -->
-      <v-sheet width="800" class="pa-4">
+      <v-sheet width="100%" max-height="400px" class="pa-4" style="overflow-y: auto;">
         <v-container>
           <v-row>
             <!-- Column 1 -->
-            <v-col cols="4">
+            <v-col cols="12" md="4">
               <h3 class="text-h6">Products</h3>
               <v-list dense>
                 <v-list-item link :to="{ path: '/store' }">
@@ -35,7 +35,7 @@
             </v-col>
 
             <!-- Column 2 -->
-            <v-col cols="4">
+            <v-col cols="12" md="4">
               <h3 class="text-h6">Categories</h3>
               <v-list dense>
                 <v-list-item link :to="{ path: '/3d-scene' }">
@@ -51,7 +51,7 @@
             </v-col>
 
             <!-- Column 3 -->
-            <v-col cols="4">
+            <v-col cols="12" md="4">
               <h3 class="text-h6">Services</h3>
               <v-list dense>
                 <v-list-item link :to="{ path: '/services/installation' }">
@@ -68,6 +68,7 @@
           </v-row>
         </v-container>
       </v-sheet>
+
     </v-menu>
   </v-app-bar>
 </template>

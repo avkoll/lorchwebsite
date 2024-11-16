@@ -2,6 +2,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import FitScreen from "@fit-screen/vue";
 
 // Vuetify styles and icons
 import { createVuetify } from 'vuetify';
@@ -10,6 +11,8 @@ import '@mdi/font/css/materialdesignicons.css';
 
 // Import Vercel Analytics
 import { inject } from '@vercel/analytics';
+
+
 
 // Create Vuetify instance
 const vuetify = createVuetify({
@@ -31,6 +34,7 @@ const vuetify = createVuetify({
 const app = createApp(App)
     .use(router)     // Use the router
     .use(vuetify)    // Use Vuetify
+    .use(FitScreen)
     .mount('#app');
 
 // Inject Vercel Analytics
