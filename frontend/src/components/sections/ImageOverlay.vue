@@ -27,9 +27,11 @@ export default {
   height: 60vh; /* Adjust height as per your design */
   width: 100%;   /* Add width to ensure it's visible */
   position: relative;
+  z-index: 1;
 }
 
 .text-overlay {
+  font-size: 1.5rem;
   position: absolute;
   top: 50%;
   left: 50%;

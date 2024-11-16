@@ -3,8 +3,10 @@
   <v-container class="hero" fluid>
     <v-img src="/" class="hero-image">
       <div class="overlay">
-        <h1>"We Capture Light, You Capture What’s Left." <br>
-          -Lorch</h1>
+        <h1 class="text-secondary">
+          "We Capture Light, You Capture What’s Left." <br>
+          -Lorch
+        </h1>
         <v-btn color="primary" large @click="scrollToContent">Learn More</v-btn>
       </div>
     </v-img>
@@ -25,6 +27,7 @@ export default {
 .hero-image {
   height: 80vh;
   position: relative;
+  z-index: 10;
 }
 .overlay {
   position: absolute;
@@ -32,9 +35,9 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
-  color: white;
   font-family: 'Georgia', sans-serif;
   font-size: 2rem;
   font-style: italic;
+  z-index: 10;
 }
 </style>
